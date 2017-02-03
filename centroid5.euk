@@ -1,0 +1,56 @@
+box -1, -1, 4,4 
+A = point( 1, 3)
+C=  point(3,2)
+B= point(0,2)
+
+
+draw
+   (A.B.C)
+end
+
+A_0 = midpoint(B.C)
+B_0 = midpoint(C.A)
+C_0 = midpoint(A.B)
+
+AB=line(A,B)
+CA=line(C,A)
+BC=line(B,C)
+
+L_1 = bisector(AB,CA)
+L_2 = bisector(BC,CA)
+L_3 = bisector(AB,BC)
+
+
+A_1= intersection(L_1,BC)
+C_1= intersection(L_2,AB)
+B_1= intersection(L_3,CA)
+
+
+M_1=reflection(A.A_0, L_1)
+M_2=reflection(C.C_0, L_2)
+M_3=reflection(B.B_0, L_3)
+
+S= intersection(M_1,M_3)
+
+label
+  A 90 deg
+  B 180 deg
+  C 0 deg
+end
+
+
+
+
+draw blue
+  A.A_0 ; B.B_0 ; C.C_0
+end
+
+label
+  A_0 -90 deg ; B_0 45 deg ; C_0  120 deg
+
+end
+
+
+
+
+

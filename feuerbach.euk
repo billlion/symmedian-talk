@@ -1,0 +1,26 @@
+A B C triangle
+
+A' = projection(A, line(B, C))
+B' = projection(B, line(C, A))
+C' = projection(C, line(A, B))
+
+A_0 = midpoint(B.C)
+B_0 = midpoint(C.A)
+C_0 = midpoint(A.B)
+
+draw
+  (A.B.C)
+  circle(A', B', C')
+  A'; B'; C'
+  A_0 ; B_0 ; C_0
+end
+draw dashed
+  A.A' ; B.B' ; C.C'
+end
+
+label
+  A -135 deg; B -45 deg; C 90 deg
+  A' 45 deg ; B' 135 deg ; C' -90 deg
+  A_0 30 deg ; B_0 150 deg ; C_0 -90 deg
+end
+
