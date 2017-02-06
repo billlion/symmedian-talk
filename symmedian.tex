@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 \usepackage{animate}
 \usepackage{hyperref}
-
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
 \begin{document}
 \title{Where am I? The symmedian point!}   
 \author{Bill Lionheart} 
@@ -166,7 +166,7 @@ Now reflect the median line {\color{blue}(blue)} in the bisector {\color{red}(re
 \vspace{-0.5cm}
 \begin{center}
 \only<1->{
-There is a list: Clark Kimberling's  {\em Encyclopedia of Triangle Centers}. }
+There is a list: Clark Kimberling's  \href{http://faculty.evansville.edu/ck6/encyclopedia/ETC.html}{\em Encyclopedia of Triangle Centers}. }
 
 \only<2->{
 The Symmedian point is number 6 on the list }
@@ -185,13 +185,39 @@ To find your position (including height) using GPS you need the distance to four
 I will leave it to you to see if you can extend what we have done today to that case!
 \end{frame}
 
+\frame{
+
+\begin{center}
+\huge
+The End
+\end{center}
+
+}
 
 \begin{frame}\frametitle{Notes}
-\small
+\tiny
 \begin{itemize}
 \item If you want a quick overview of Celestial Navigation I recommend Blue Planet Cruising School's ``Celestial Navigation the missing introduction" \url{http://www.blueplanetcruisingschool.com/celestial-navigation-the-missing-introduction/} Diagrams are better than mine!
-\item If you are interested in the question I raised about GPS and the symmedian of a tetrahedron, []lease have a go yourself. When you have done that you might consult Jawad Sadek, Majid Bani-Yaghoub, and Noah H. Rhee, Forum Geometricorum, Isogonal Conjugates in a Tetrahedron,
-Forum Geo,Volume 16 (2016) 43–50.
+\item For more on the Symmedian Point see Ross Honsberger, Episodes in Nineteenth and Twentieth Century Euclidean Geometry, Mathematical Association of America, 1995. Chapter 7: The Symmedian Point. 
+\item If you are interested in the question I raised about GPS and the symmedian of a tetrahedron, please have a go yourself. It is within the reach of good A-level maths students. When you have done that you might consult: Jawad Sadek, Majid Bani-Yaghoub, and Noah H. Rhee, Forum Geometricorum, Isogonal Conjugates in a Tetrahedron,
+Forum Geo,Volume 16 (2016) 43–50. They have solved the symmedian problem but only in 2016, so if you do it yourself you are only a little behind current research! There are more subtleties to do the errors in GPS as you usually measure the differences between distances to pairs of satellites.. I'll let you experiment with further generalizations.
+\item The diagrams are constructed using a program called Euklides, which I only tried the day before I first gave the talk so I am still getting to grips with. The source code for my diagrams is on \href{https://github.com/billlion/symmedian-talk}{GitHub}
+\item There are lots of posts on \href{http://fer3.com/arc/m2.aspx/Finding-Symmedian-PeterFogg-dec-2010-g15003}{NavList} about the symmedian point in navigation.
+\item An early derivation of the symmedian point and astronomical observations is : Point the most probable position of a, determined from the intersection of three straight lines SA \href{http://adsabs.harvard.edu/full/1905MNRAS..65..854S}{Saunder,  Monthly Notices of the Royal Astronomical Society, Vol. 65, p.854}
+
 \end{itemize}
 \end{frame}
+\frame{ 
+\frametitle{Dr Steele's sextant}\small
+Dr Steele's Great Great Grandfather Andrew Reay was a sea captain born around 1828 and this is his McMillan and Talbot sextant. It has a Vernier scale to read to minutes of arc (1/60th of a degree), and there would have been a magnifying lens to read the Vernier scale. It is typical of a 19th century instrument.  
+\begin{center}
+\includegraphics[scale=0.05]{McMillan1a}
+\end{center}
+}
+\frame{ 
+\frametitle{My Sextant}\small
+My Tamaya is  a modern Japanese working sextant that I carry on my boat. It has worm gear worked by a  drum calibrated in minutes and a Vernier to read to 0.2 minutes of arc. It has a prismatic monocular telescope for viewing stars.
+
+\includegraphics[scale=0.35]{Tamaya}
+}
 \end{document}
